@@ -1,0 +1,19 @@
+{
+    "name": "litespeed/migrations",
+    "type": "neos-litespeed",
+    "description": "Migrations for Litespeed",
+    "license": "Unlicensed",
+    "require": {
+        "neos/neos": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Litespeed\\Migrations\\": "Classes/"
+        }
+    },
+    "keywords": [
+        "flow",
+        "neos",
+        "litespeed"
+    ]
+}
