@@ -10,8 +10,12 @@ use Doctrine\DBAL\Schema\Schema;
  */
 class RenameToLighspeedMigration extends AbstractMigration
 {
-    const OLD_NAME = 'Base';
-    const NEW_NAME = 'Litespeed';
+    const RENAME_VENDOR = [
+        'Base' => 'Litespeed',
+    ];
+    const RENAME_PACKAGES = [
+        'Theme' => 'Integration',
+    ];
 
     public function up(Schema $schema): void
     {
@@ -35,23 +39,46 @@ class RenameToLighspeedMigration extends AbstractMigration
      */
     private function rename(bool $up): void
     {
-        $newRootName = $up ? self::NEW_NAME : self::OLD_NAME;
-        $oldRootName = $up ? self::OLD_NAME : self::NEW_NAME;
+        foreach (self::RENAME_VENDOR as $old => $new) {
+            $oldVendor = $up ? $old : $new;
+            $newVendor = $up ? $new : $old;
 
-        $this->addSql(
-            sprintf(
-                "UPDATE neos_neos_domain_model_site SET siteresourcespackagekey = REPLACE(siteresourcespackagekey, '%s.', '%s.')",
-                $oldRootName,
-                $newRootName
-            )
-        );
+            $this->addSql(
+                sprintf(
+                    "UPDATE neos_neos_domain_model_site SET siteresourcespackagekey = REPLACE(siteresourcespackagekey, '%s.', '%s.')",
+                    $oldVendor,
+                    $newVendor
+                )
+            );
 
-        $this->addSql(
-            sprintf(
-                "UPDATE neos_contentrepository_domain_model_nodedata SET nodetype = REPLACE(nodetype, '%s.', '%s.')",
-                $oldRootName,
-                $newRootName
-            )
-        );
+            $this->addSql(
+                sprintf(
+                    "UPDATE neos_contentrepository_domain_model_nodedata SET nodetype = REPLACE(nodetype, '%s.', '%s.')",
+                    $oldVendor,
+                    $newVendor
+                )
+            );
+        }
+
+        foreach (self::RENAME_PACKAGES as $old => $new) {
+            $oldPackage = $up ? $old : $new;
+            $newPackage = $up ? $new : $old;
+
+            $this->addSql(
+                sprintf(
+                    "UPDATE neos_neos_domain_model_site SET siteresourcespackagekey = REPLACE(siteresourcespackagekey, '.%s', '.%s')",
+                    $oldPackage,
+                    $newPackage
+                )
+            );
+
+            $this->addSql(
+                sprintf(
+                    "UPDATE neos_contentrepository_domain_model_nodedata SET nodetype = REPLACE(nodetype, '.%s', '.%s')",
+                    $oldPackage,
+                    $newPackage
+                )
+            );
+        }
     }
 }
