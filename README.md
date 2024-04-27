@@ -4,11 +4,11 @@ Sometimes, things change. This package helps you to migrate old installation to 
 
 ## Installation
 
-This package is available via [satis]. Run `composer require litespeed/migrations --no-update` in your
+This package is available via [satis]. Run `composer require lspeed/migrations --no-update` in your
 `Litespeed.Distribution` package. After that, run `composer update` in your root directory.
 
 > In order to work correctly you'll need a working [Litespeed] running. Here you'll find the basis [Distribution]
 
 [litespeed]: https://litespeed.io
 [distribution]: https://github.com/LitespeedProject/Distribution.Closed
-[satis]: https://composer.uhlmann.pro/#litespeed/migrations
+[satis]: https://composer.uhlmann.pro/#lspeed/migrations

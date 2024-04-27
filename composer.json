@@ -1,5 +1,5 @@
 {
-    "name": "litespeed/migrations",
+    "name": "lspeed/migrations",
     "type": "neos-litespeed",
     "description": "Migrations for Litespeed",
     "license": "Unlicensed",
