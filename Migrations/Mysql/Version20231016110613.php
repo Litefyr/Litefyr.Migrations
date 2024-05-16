@@ -2,11 +2,11 @@
 
 namespace Neos\Flow\Persistence\Doctrine\Migrations;
 
-use Litespeed\Migrations\RenameToLighspeedMigration;
+use Litefyr\Migrations\RenameToLitefyrMigration;
 
 /**
- * Rename Base Packages to Lighspeed
+ * Rename Base Packages to Litefyr
  */
-class Version20231016110613 extends RenameToLighspeedMigration
+class Version20231016110613 extends RenameToLitefyrMigration
 {
 }

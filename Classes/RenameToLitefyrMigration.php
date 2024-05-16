@@ -1,17 +1,17 @@
 <?php
 
-namespace Litespeed\Migrations;
+namespace Litefyr\Migrations;
 
 use Doctrine\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
 
 /**
- * Rename Base to Litespeed
+ * Rename Base to Litefyr
  */
-class RenameToLighspeedMigration extends AbstractMigration
+class RenameToLitefyrMigration extends AbstractMigration
 {
     const RENAME_VENDOR = [
-        'Base' => 'Litespeed',
+        'Base' => 'Litefyr',
     ];
     const RENAME_PACKAGES = [
         'Theme' => 'Integration',
