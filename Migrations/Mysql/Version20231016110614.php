@@ -7,6 +7,6 @@ use Litefyr\Migrations\RenameToLitefyrMigration;
 /**
  * Rename Base Packages to Litefyr
  */
-class Version20231016110613 extends RenameToLitefyrMigration
+class Version20231016110614 extends RenameToLitefyrMigration
 {
 }
