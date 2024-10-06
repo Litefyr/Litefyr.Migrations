@@ -7,6 +7,19 @@ use Doctrine\DBAL\Schema\Schema;
 
 /**
  * Rename Node Types
+ *
+ * Create a PHP file under Migrations/Mysql
+ *
+ * <?php
+ * namespace Neos\Flow\Persistence\Doctrine\Migrations;
+ * use Litefyr\Migrations\RenameNodeTypesMigration;
+ * class Version20240726000000 extends RenameNodeTypesMigration
+ * {
+ *      public array $nodeTypes = [
+ *          'Litefyr.Example:Content.OldNodeType' => 'Litefyr.Example:Content.NewNodeType',
+ *          'Litefyr.Example:Document.OldNodeType' => 'Litefyr.Example:Document.NewNodeType',
+ *      ];
+ * }
  */
 class RenameNodeTypesMigration extends AbstractMigration
 {

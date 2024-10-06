@@ -1,5 +1,5 @@
 up:
-  comments: 'Rename property value textBoxDirection'
+  comments: 'Rename property value from textBoxDirection'
   migration:
     - filters:
         - type: 'NodeType'
@@ -32,7 +32,7 @@ up:
               east: right
 
 down:
-  comments: 'Revert property value textBoxDirection'
+  comments: 'Revert property value change from textBoxDirection'
   migration:
     - filters:
         - type: 'NodeType'
