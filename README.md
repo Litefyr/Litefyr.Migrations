@@ -11,4 +11,4 @@ This package is available via [packagist]. Run `composer require litefyr/migrati
 
 [litefyr]: https://litefyr.io
 [distribution]: https://github.com/Litefyr/Distribution
-[packagist]: https://packagist.org/packages/litefyr/papertiger
+[packagist]: https://packagist.org/packages/litefyr/migrations
