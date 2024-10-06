@@ -2,7 +2,7 @@
     "name": "litefyr/migrations",
     "type": "neos-litefyr",
     "description": "Migrations for Litefyr",
-    "license": "Unlicensed",
+    "license": "GPL-3.0-or-later",
     "require": {
         "neos/neos": "*"
     },

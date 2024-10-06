@@ -1,0 +1,65 @@
+up:
+  comments: 'Rename property value textBoxDirection'
+  migration:
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Integration:Mixin.TextBox'
+            withSubTypes: true
+      transformations:
+        - type: 'Litefyr\Migrations\RenamePropertyValuesMigration'
+          settings:
+            propertyName: textBoxDirection
+            values:
+              south: inline
+              northEast: topRight
+              northWest: topLeft
+              southEast: bottomRight
+              southWest: bottomLeft
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Grid:Mixin.Item'
+            withSubTypes: true
+      transformations:
+        - type: 'Litefyr\Migrations\RenamePropertyValuesMigration'
+          settings:
+            propertyName: textBoxDirection
+            values:
+              south: bottom
+              north: top
+              west: left
+              east: right
+
+down:
+  comments: 'Revert property value textBoxDirection'
+  migration:
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Integration:Mixin.TextBox'
+            withSubTypes: true
+      transformations:
+        - type: 'Litefyr\Migrations\RenamePropertyValuesMigration'
+          settings:
+            propertyName: textBoxDirection
+            values:
+              inline: south
+              topRight: northEast
+              topLeft: northWest
+              bottomRight: southEast
+              bottomLeft: southWest
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Grid:Mixin.Item'
+            withSubTypes: true
+      transformations:
+        - type: 'Litefyr\Migrations\RenamePropertyValuesMigration'
+          settings:
+            propertyName: textBoxDirection
+            values:
+              bottom: south
+              top: north
+              left: west
+              right: east

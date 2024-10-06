@@ -6,7 +6,7 @@ use Doctrine\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
 
 /**
- * rename content elements in sluider
+ * Rename Node Types
  */
 class RenameNodeTypesMigration extends AbstractMigration
 {
