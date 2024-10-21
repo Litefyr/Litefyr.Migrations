@@ -1,5 +1,8 @@
 Litefyr:
+  Migrations:
+    node:
+      20241005220000: true
   Integration:
     flowCommandsOnStartup:
       Migrations:
-        - 'node:migrate --version 20241005220000'
+        - 'migrations'

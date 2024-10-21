@@ -1,6 +1,6 @@
 <?php
 
-namespace Litefyr\Migrations;
+namespace Litefyr\Migrations\Migrations;
 
 use Neos\ContentRepository\Domain\Model\NodeData;
 use Neos\ContentRepository\Migration\Transformations\AbstractTransformation;

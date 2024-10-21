@@ -1,6 +1,6 @@
 <?php
 
-namespace Litefyr\Migrations;
+namespace Litefyr\Migrations\Migrations;
 
 use Doctrine\Migrations\AbstractMigration;
 use Doctrine\DBAL\Schema\Schema;
