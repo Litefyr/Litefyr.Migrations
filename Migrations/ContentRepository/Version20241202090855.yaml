@@ -1,0 +1,46 @@
+up:
+  comments: 'Convert border radius values to new format'
+  migration:
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.IconList:Content'
+      transformations:
+        - type: 'Litefyr\Migrations\Migrations\BorderRadiusMigration'
+          settings:
+            property: 'rounded'
+            fullRounded: 26
+            convertPxToRem: true
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Style:Mixin.Visuals.Rounded'
+            withSubTypes: true
+      transformations:
+        - type: 'Litefyr\Migrations\Migrations\BorderRadiusMigration'
+          settings:
+            property: 'themeRoundedBox'
+            convertPxToRem: true
+        - type: 'Litefyr\Migrations\Migrations\BorderRadiusMigration'
+          settings:
+            property: 'themeRoundedImage'
+            fullRounded: 30
+            convertPxToRem: true
+        - type: 'Litefyr\Migrations\Migrations\BorderRadiusMigration'
+          settings:
+            property: 'themeRoundedInput'
+            convertPxToRem: true
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Style:Mixin.ScollIndicator'
+            withSubTypes: true
+      transformations:
+        - type: 'Litefyr\Migrations\Migrations\BorderRadiusMigration'
+          settings:
+            property: 'themeScrollIndicatorRounded'
+            fullRounded: 26
+            convertPxToRem: false
+
+down:
+  comments: 'No down migration available'

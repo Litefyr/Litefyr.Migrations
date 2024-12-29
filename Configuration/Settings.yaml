@@ -1,8 +1,12 @@
-Litefyr:
-  Migrations:
+Carbon:
+  AutoMigrate:
     node:
       20241005220000: true
+      20241202090855: true
+      20241207181100: true
+
+Litefyr:
   Integration:
     flowCommandsOnStartup:
       Migrations:
-        - 'migrations'
+        - 'node:automigrate'

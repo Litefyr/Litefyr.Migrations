@@ -1,0 +1,80 @@
+up:
+  comments: 'Set enable headline to true of headline or label is set'
+  migration:
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Grid:Content.Text'
+        - type: 'PropertyNotEmpty'
+          settings:
+            propertyName: 'headline'
+      transformations:
+        - type: 'AddNewProperty'
+          settings:
+            newPropertyName: 'enableHeadline'
+            value: true
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Grid:Content.Text'
+        - type: 'PropertyNotEmpty'
+          settings:
+            propertyName: 'label'
+      transformations:
+        - type: 'AddNewProperty'
+          settings:
+            newPropertyName: 'enableHeadline'
+            value: true
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Integration:Content.Text'
+        - type: 'PropertyNotEmpty'
+          settings:
+            propertyName: 'headline'
+      transformations:
+        - type: 'AddNewProperty'
+          settings:
+            newPropertyName: 'enableHeadline'
+            value: true
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Integration:Content.Text'
+        - type: 'PropertyNotEmpty'
+          settings:
+            propertyName: 'label'
+      transformations:
+        - type: 'AddNewProperty'
+          settings:
+            newPropertyName: 'enableHeadline'
+            value: true
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Integration:Mixin.TextWithContent'
+            withSubTypes: true
+        - type: 'PropertyNotEmpty'
+          settings:
+            propertyName: 'headline'
+      transformations:
+        - type: 'AddNewProperty'
+          settings:
+            newPropertyName: 'enableHeadline'
+            value: true
+    - filters:
+        - type: 'NodeType'
+          settings:
+            nodeType: 'Litefyr.Integration:Mixin.TextWithContent'
+            withSubTypes: true
+        - type: 'PropertyNotEmpty'
+          settings:
+            propertyName: 'label'
+      transformations:
+        - type: 'AddNewProperty'
+          settings:
+            newPropertyName: 'enableHeadline'
+            value: true
+
+down:
+  comments: 'No down migration available'

@@ -7,7 +7,7 @@ up:
             nodeType: 'Litefyr.Integration:Mixin.TextBox'
             withSubTypes: true
       transformations:
-        - type: 'Litefyr\Migrations\Migrations\RenamePropertyValuesMigration'
+        - type: 'Carbon\AutoMigrate\Migrations\RenamePropertyValuesMigration'
           settings:
             propertyName: textBoxDirection
             values:
@@ -22,7 +22,7 @@ up:
             nodeType: 'Litefyr.Grid:Mixin.Item'
             withSubTypes: true
       transformations:
-        - type: 'Litefyr\Migrations\Migrations\RenamePropertyValuesMigration'
+        - type: 'Carbon\AutoMigrate\Migrations\RenamePropertyValuesMigration'
           settings:
             propertyName: textBoxDirection
             values:
@@ -40,7 +40,7 @@ down:
             nodeType: 'Litefyr.Integration:Mixin.TextBox'
             withSubTypes: true
       transformations:
-        - type: 'Litefyr\Migrations\Migrations\RenamePropertyValuesMigration'
+        - type: 'Carbon\AutoMigrate\Migrations\RenamePropertyValuesMigration'
           settings:
             propertyName: textBoxDirection
             values:
@@ -55,7 +55,7 @@ down:
             nodeType: 'Litefyr.Grid:Mixin.Item'
             withSubTypes: true
       transformations:
-        - type: 'Litefyr\Migrations\Migrations\RenamePropertyValuesMigration'
+        - type: 'Carbon\AutoMigrate\Migrations\RenamePropertyValuesMigration'
           settings:
             propertyName: textBoxDirection
             values:
