@@ -9,7 +9,7 @@ This package is available via [packagist]. Run `composer require litefyr/migrati
 
 Under the hood, this package uses [Carbon.AutoMigrate]. Read there on how to set up your deployment pipeline.
 
-> In order to work correctly you'll need a working [Litefyr] instance running. Here you'll find the basis [Distribution]
+> In order to work correctly you'll need a working [Litefyr] instance running. Here you'll find the [Distribution] package
 
 [litefyr]: https://litefyr.io
 [distribution]: https://github.com/Litefyr/Distribution
